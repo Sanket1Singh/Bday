@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Happy Birthday Nandani ❤️</title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at top left,
+          #fff0f6,
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          #ffe1ec,
+          transparent 40%
+        ),
+        linear-gradient(
+          135deg,
+          #ffdce9,
+          #fff5f8
+        );
+
+      overflow: hidden;
+
+    }
+
+
+    /* =========================
+       MAI CARD
+    ========================= */
+
+    .container {
+
+      position: relative;
+
+      width: calc(100% - 30px);
+
+      max-width: 540px;
+
+      min-height: 590px;
+
+      padding: 35px 25px;
+
+      background:
+        rgba(255,255,255,0.96);
+
+      border-radius: 28px;
+
+      box-shadow:
+        0 20px 60px
+        rgba(180,40,90,0.22);
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    /* =========================
+       SLIDES
+    ========================= */
+
+    .slide {
+
+      display: none;
+
+      width: 100%;
+
+      text-align: center;
+
+      animation:
+        slideIn
+        0.7s
+        ease;
+
+      position: relative;
+
+      z-index: 5;
+
+    }
+
+
+    .slide.active {
+
+      display: block;
+
+    }
+
+
+    @keyframes slideIn {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(25px)
+          scale(.96);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    /* =========================
+       EMOJIS
+    ========================= */
+
+    .emoji-big {
+
+      display: block;
+
+      font-size: 75px;
+
+      margin-bottom: 18px;
+
+      animation:
+        gentleBounce
+        1.6s
+        infinite;
+
+    }
+
+
+    @keyframes gentleBounce {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-10px);
+
+      }
+
+    }
+
+
+    /* =========================
+       TEXT
+    ========================= */
+
+    .slide-title {
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: #d81b60;
+
+      line-height: 1.4;
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .slide-text {
+
+      max-width: 410px;
+
+      margin: auto;
+
+      color: #71344f;
+
+      font-size: 16px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .name {
+
+      color: #e91e63;
+
+      font-weight: bold;
+
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .btn-row {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+
+    }
+
+
+    .btn-next {
+
+      border: none;
+
+      padding:
+        13px
+        30px;
+
+      border-radius: 50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #e91e63,
+          #c2185b
+        );
+
+      color: white;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 7px 20px
+        rgba(233,30,99,.25);
+
+      transition:
+        .2s;
+
+    }
+
+
+    .btn-next:hover {
+
+      transform:
+        translateY(-3px)
+        scale(1.02);
+
+    }
+
+
+    .btn-next:active {
+
+      transform:
+        scale(.96);
+
+    }
+
+
+    .btn-restart {
+
+      border:
+        2px solid
+        #e91e63;
+
+      background: white;
+
+      color: #e91e63;
+
+      padding:
+        10px
+        22px;
+
+      border-radius: 50px;
+
+      cursor: pointer;
+
+      font-size: 14px;
+
+    }
+
+
+    .btn-restart:hover {
+
+      background: #fff0f5;
+
+    }
+
+
+    /* =========================
+       PROGRESS
+    ========================= */
+
+    .progress {
+
+      position: absolute;
+
+      top: 20px;
+
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      display: flex;
+
+      gap: 7px;
+
+      z-index: 10;
+
+    }
+
+
+    .dot {
+
+      width: 9px;
+
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: #f4b1c8;
+
+      transition: .3s;
+
+    }
+
+
+    .dot.done {
+
+      background:
+        #e91e63;
+
+      transform:
+        scale(1.2);
+
+    }
+
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    .hearts {
+
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      overflow: hidden;
+
+      z-index: 1;
+
+    }
+
+
+    .heart {
+
+      position: absolute;
+
+      bottom: -30px;
+
+      font-size: 22px;
+
+      animation:
+        heartFloat
+        4s
+        linear
+        forwards;
+
+      opacity: 0;
+
+    }
+
+
+    @keyframes heartFloat {
+
+      0% {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translateY(-650px)
+          rotate(35deg);
+
+      }
+
+    }
+
+
+    /* =========================
+       BALLOONS
+    ========================= */
+
+    .balloon {
+
+      position: absolute;
+
+      font-size: 45px;
+
+      z-index: 2;
+
+      animation:
+        balloonMove
+        3s
+        ease-in-out
+        infinite;
+
+    }
+
+
+    .balloon1 {
+
+      top: 45px;
+
+      left: 15px;
+
+    }
+
+
+    .balloon2 {
+
+      top: 90px;
+
+      right: 15px;
+
+      animation-delay:
+        .7s;
+
+    }
+
+
+    .balloon3 {
+
+      bottom: 25px;
+
+      left: 15px;
+
+      animation-delay:
+        1.2s;
+
+    }
+
+
+    .balloon4 {
+
+      bottom: 35px;
+
+      right: 15px;
+
+      animation-delay:
+        1.7s;
+
+    }
+
+
+    @keyframes balloonMove {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0)
+          rotate(-5deg);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-15px)
+          rotate(6deg);
+
+      }
+
+    }
+
+
+    /* =========================
+       CAKE
+    ========================= */
+
+    .cake {
+
+      position: relative;
+
+      width: 240px;
+
+      height: 220px;
+
+      margin:
+        15px
+        auto
+        5px;
+
+    }
+
+
+    .cake-top {
+
+      position: absolute;
+
+      width: 200px;
+
+      height: 42px;
+
+      left: 20px;
+
+      top: 60px;
+
+      background:
+        linear-gradient(
+          #ffb4d2,
+          #ff8fba
+        );
+
+      border-radius: 50%;
+
+      z-index: 3;
+
+    }
+
+
+    .cake-body {
+
+      position: absolute;
+
+      width: 200px;
+
+      height: 90px;
+
+      left: 20px;
+
+      top: 80px;
+
+      background:
+        linear-gradient(
+          #ffb6d4,
+          #ff8db8
+        );
+
+      border-radius:
+        0
+        0
+        18px
+        18px;
+
+      z-index: 2;
+
+      box-shadow:
+        inset
+        0 -15px
+        rgba(255,255,255,.2);
+
+    }
+
+
+    .cake-bottom {
+
+      position: absolute;
+
+      width: 215px;
+
+      height: 25px;
+
+      left: 12px;
+
+      top: 155px;
+
+      background:
+        #e978a5;
+
+      border-radius: 50%;
+
+      z-index: 1;
+
+    }
+
+
+    .cake-cream {
+
+      font-size: 20px;
+
+      padding-top: 8px;
+
+    }
+
+
+    .cake-name {
+
+      margin-top: 10px;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      color: #b71550;
+
+    }
+
+
+    /* =========================
+       CANDLES
+    ========================= */
+
+    .candle {
+
+      position: absolute;
+
+      top: 8px;
+
+      width: 16px;
+
+      height: 58px;
+
+      border-radius: 5px;
+
+      background:
+        repeating-linear-gradient(
+          45deg,
+          #fff,
+          #fff 6px,
+          #f06292 6px,
+          #f06292 11px
+        );
+
+      z-index: 5;
+
+    }
+
+
+    .candle1 {
+
+      left: 68px;
+
+    }
+
+
+    .candle2 {
+
+      left: 112px;
+
+    }
+
+
+    .candle3 {
+
+      left: 156px;
+
+    }
+
+
+    .flame {
+
+      position: absolute;
+
+      top: -28px;
+
+      left: -4px;
+
+      font-size: 23px;
+
+      animation:
+        flameMove
+        .5s
+        infinite
+        alternate;
+
+    }
+
+
+    @keyframes flameMove {
+
+      from {
+
+        transform:
+          scale(.9)
+          rotate(-4deg);
+
+      }
+
+      to {
+
+        transform:
+          scale(1.15)
+          rotate(4deg);
+
+      }
+
+    }
+
+
+    /* =========================
+       BIRTHDAY FINAL
+    ========================= */
+
+    .birthday-heading {
+
+      font-size: 28px;
+
+      font-weight: bold;
+
+      color: #e91e63;
+
+      animation:
+        titlePulse
+        1.4s
+        infinite;
+
+    }
+
+
+    .birthday-name {
+
+      font-size: 38px;
+
+      font-weight: bold;
+
+      color: #c2185b;
+
+      margin:
+        5px
+        0
+        10px;
+
+    }
+
+
+    .birthday-message {
+
+      max-width: 370px;
+
+      margin: auto;
+
+      color: #71344f;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    @keyframes titlePulse {
+
+      0%,
+      100% {
+
+        transform:
+          scale(1);
+
+      }
+
+      50% {
+
+        transform:
+          scale(1.05);
+
+      }
+
+    }
+
+
+    /* =========================
+       BLOW BUTTON
+    ========================= */
+
+    .blow-btn {
+
+      border: none;
+
+      padding:
+        13px
+        26px;
+
+      border-radius: 50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff4081,
+          #e91e63
+        );
+
+      color: white;
+
+      font-size: 15px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 20px
+        rgba(233,30,99,.25);
+
+      transition: .2s;
+
+    }
+
+
+    .blow-btn:hover {
+
+      transform:
+        scale(1.05);
+
+    }
+
+
+    /* =========================
+       AFTER CANDLES
+    ========================= */
+
+    .after-blow {
+
+      display: none;
+
+      animation:
+        reveal
+        1s
+        ease;
+
+    }
+
+
+    .after-blow.show {
+
+      display: block;
+
+    }
+
+
+    @keyframes reveal {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          scale(.6);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1);
+
+      }
+
+    }
+
+
+    .celebration-emoji {
+
+      font-size: 42px;
+
+      margin:
+        5px
+        0;
+
+      animation:
+        celebrationBounce
+        1s
+        infinite;
+
+    }
+
+
+    @keyframes celebrationBounce {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-8px);
+
+      }
+
+    }
+
+
+    .final-title {
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: #e91e63;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .final-message {
+
+      color: #71344f;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .signature {
+
+      margin-top: 15px;
+
+      color: #a83b65;
+
+      font-style: italic;
+
+    }
+
+
+    /* =========================
+       CONFETTI
+    ========================= */
+
+    .confetti {
+
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      overflow: hidden;
+
+      z-index: 20;
+
+    }
+
+
+    .confetti-piece {
+
+      position: absolute;
+
+      top: -20px;
+
+      width: 8px;
+
+      height: 15px;
+
+      animation:
+        confettiFall
+        3s
+        linear
+        forwards;
+
+    }
+
+
+    @keyframes confettiFall {
+
+      from {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 1;
+
+      }
+
+      to {
+
+        transform:
+          translateY(650px)
+          rotate(720deg);
+
+        opacity: 0;
+
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 480px) {
+
+      .container {
+
+        min-height: 570px;
+
+        padding:
+          35px
+          15px;
+
+      }
+
+
+      .slide-title {
+
+        font-size: 21px;
+
+      }
+
+
+      .slide-text {
+
+        font-size: 14px;
+
+      }
+
+
+      .emoji-big {
+
+        font-size: 60px;
+
+      }
+
+
+      .birthday-heading {
+
+        font-size: 23px;
+
+      }
+
+
+      .birthday-name {
+
+        font-size: 32px;
+
+      }
+
+
+      .cake {
+
+        transform:
+          scale(.85);
+
+        margin:
+          0
+          auto;
+
+      }
+
+
+      .balloon {
+
+        font-size: 35px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div
+    class="container"
+    id="maiBox"
+  >
+
+
+    <!-- Floating hearts -->
+
+    <div
+      class="hearts"
+      id="heartsBox"
+    ></div>
+
+
+    <!-- Progress -->
+
+    <div
+      class="progress"
+      id="progressDots"
+    ></div>
+
+
+    <!-- =========================
+         SLIDE 0
+    ========================= -->
+
+    <div
+      class="slide active"
+      id="slide-0"
+    >
+
+      <span class="emoji-big">
+        🎁
+      </span>
+
+
+      <div class="slide-title">
+
+        Hey
+        <span class="name">
+          Nandani
+        </span>
+        ❤️
+
+      </div>
+
+
+      <div class="slide-text">
+
+        Aaj ka din normal nahi hai...
+
+        <br><br>
+
+        Kyunki aaj ke din
+        duniya mein ek bahut hi
+        special ladki aayi thi. 🥰
+
+        <br><br>
+
+        Aur haan...
+
+        <br>
+
+        Woh ladki
+        <span class="name">
+          tum ho.
+        </span>
+        ❤️
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="nextSlide()"
+        >
+
+          Tumhare liye surprise 🎁
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SLIDE 1
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-1"
+    >
+
+      <span class="emoji-big">
+        🎂
+      </span>
+
+
+      <div class="slide-title">
+
+        Happy Birthday
+        <span class="name">
+          Nandani!
+        </span>
+        ❤️
+
+      </div>
+
+
+      <div class="slide-text">
+
+        Aaj ka din sirf tumhara hai.
+
+        <br><br>
+
+        Isliye aaj tension,
+        sadness aur overthinking ko
+        side mein rakho.
+
+        😌
+
+        <br><br>
+
+        Aaj bas
+        <strong>
+          smile karna hai.
+        </strong>
+
+        😊
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="nextSlide()"
+        >
+
+          Aur suno ❤️
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SLIDE 2
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-2"
+    >
+
+      <span class="emoji-big">
+        🥰
+      </span>
+
+
+      <div class="slide-title">
+
+        Tum mere liye special ho ❤️
+
+      </div>
+
+
+      <div class="slide-text">
+
+        Zindagi mein bahut saare
+        log milte hain...
+
+        <br><br>
+
+        Lekin kuch log pata nahi
+        kaise dil ke bahut kareeb
+        aa jaate hain.
+
+        ❤️
+
+        <br><br>
+
+        <span class="name">
+          Nandani,
+        </span>
+
+        tum unhi special logon
+        mein se ek ho.
+
+        💖
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="nextSlide()"
+        >
+
+          Next ❤️
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SLIDE 3
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-3"
+    >
+
+      <span class="emoji-big">
+        🌸
+      </span>
+
+
+      <div class="slide-title">
+
+        Meri chhoti si wish... ✨
+
+      </div>
+
+
+      <div class="slide-text">
+
+        Mai chahta hoon ki tum
+        hamesha khush raho.
+
+        ❤️
+
+        <br><br>
+
+        Tumhare saare dreams
+        complete ho.
+
+        ✨
+
+        <br><br>
+
+        Tumhari smile kabhi kam
+        na ho.
+
+        😊
+
+        <br><br>
+
+        Aur life tumhe woh sab de
+        jo tum deserve karti ho.
+
+        💕
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="nextSlide()"
+        >
+
+          Aur bhi hai 😌
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SLIDE 4
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-4"
+    >
+
+      <span class="emoji-big">
+        ✨
+      </span>
+
+
+      <div class="slide-title">
+
+        This year is yours,
+        <span class="name">
+          Nandani!
+        </span>
+
+      </div>
+
+
+      <div class="slide-text">
+
+        May this new year of your
+        life bring you...
+
+        <br><br>
+
+        ❤️ Happiness
+
+        <br>
+
+        ✨ Success
+
+        <br>
+
+        🌸 Peace
+
+        <br>
+
+        🥰 Beautiful memories
+
+        <br>
+
+        💕 Lots of love
+
+        <br><br>
+
+        Aur sabse important...
+
+        <strong>
+          bahut saari reasons to smile.
+        </strong>
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="nextSlide()"
+        >
+
+          Last Surprise 🎂
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SLIDE 5
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-5"
+    >
+
+      <span class="emoji-big">
+        🥺❤️
+      </span>
+
+
+      <div class="slide-title">
+
+        One last thing...
+
+      </div>
+
+
+      <div class="slide-text">
+
+        Aaj ek wish zaroor karna.
+
+        <br><br>
+
+        Jo tumhare dil mein hai...
+
+        <br>
+
+        Jo tum sach mein chahti ho...
+
+        <br><br>
+
+        Aankhein band karo,
+        ek beautiful wish karo...
+
+        ✨
+
+        <br><br>
+
+        Kyunki ab...
+
+        <strong>
+          Birthday Celebration
+          shuru hone wala hai! 🎉
+        </strong>
+
+      </div>
+
+
+      <div class="btn-row">
+
+        <button
+          class="btn-next"
+          onclick="birthdayFinal()"
+        >
+
+          Let's Celebrate! 🎉
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         FINAL BIRTHDAY
+    ========================= -->
+
+    <div
+      class="slide"
+      id="slide-final"
+    >
+
+
+      <div class="celebration">
+
+
+        <!-- Balloons -->
+
+        <div class="balloon balloon1">
+          🎈
+        </div>
+
+        <div class="balloon balloon2">
+          🎈
+        </div>
+
+        <div class="balloon balloon3">
+          🎈
+        </div>
+
+        <div class="balloon balloon4">
+          🎈
+        </div>
+
+
+        <!-- Confetti -->
+
+        <div
+          class="confetti"
+          id="confettiBox"
+        ></div>
+
+
+        <!-- Heading -->
+
+        <div class="birthday-heading">
+
+          🎉 HAPPY BIRTHDAY 🎉
+
+        </div>
+
+
+        <div class="birthday-name">
+
+          Nandani ❤️
+
+        </div>
+
+
+        <div class="birthday-message">
+
+          Today is all about YOU! 🥰
+
+          <br>
+
+          Close your eyes,
+          make a beautiful wish
+          and blow the candles. ✨
+
+        </div>
+
+
+        <!-- CAKE -->
+
+        <div class="cake">
+
+
+          <!-- Candle 1 -->
+
+          <div
+            class="candle candle1"
+          >
+
+            <div class="flame">
+              🔥
+            </div>
+
+          </div>
+
+
+          <!-- Candle 2 -->
+
+          <div
+            class="candle candle2"
+          >
+
+            <div class="flame">
+              🔥
+            </div>
+
+          </div>
+
+
+          <!-- Candle 3 -->
+
+          <div
+            class="candle candle3"
+          >
+
+            <div class="flame">
+              🔥
+            </div>
+
+          </div>
+
+
+          <div class="cake-top"></div>
+
+
+          <div class="cake-body">
+
+            <div class="cake-cream">
+
+              🍓 🍓 🍓
+
+            </div>
+
+
+            <div class="cake-name">
+
+              NANDANI ❤️
+
+            </div>
+
+          </div>
+
+
+          <div class="cake-bottom"></div>
+
+
+        </div>
+
+
+        <!-- Blow button -->
+
+        <button
+          class="blow-btn"
+          onclick="blowCandles()"
+        >
+
+          Blow the Candles 🕯️💨
+
+        </button>
+
+
+        <!-- AFTER BLOW -->
+
+        <div
+          class="after-blow"
+          id="afterBlow"
+        >
+
+
+          <div class="celebration-emoji">
+
+            🎉🎊🎉
+
+          </div>
+
+
+          <div class="final-title">
+
+            Happy Birthday,
+            <span class="name">
+              Nandani!
+            </span>
+            ❤️
+
+          </div>
+
+
+          <div class="final-message">
+
+            May every wish you made
+            today come true. ✨
+
+            <br><br>
+
+            May you always have reasons
+            to smile. 😊
+
+            <br><br>
+
+            May this year bring you
+            beautiful memories,
+            success, peace and lots
+            of happiness.
+
+            ❤️
+
+            <br><br>
+
+            <strong>
+              You deserve all the
+              happiness in the world.
+            </strong>
+
+          </div>
+
+
+          <div class="signature">
+
+            With lots of love ❤️
+
+          </div>
+
+
+          <div class="btn-row">
+
+            <button
+              class="btn-restart"
+              onclick="restartSlides()"
+            >
+
+              Celebrate Again 🔁
+
+            </button>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <script>
+
+
+    /* =========================
+       SETTINGS
+    ========================= */
+
+    const totalSlides = 6;
+
+    let current = 0;
+
+
+    /* =========================
+       PROGRESS DOTS
+    ========================= */
+
+    const dotsEl =
+      document.getElementById(
+        'progressDots'
+      );
+
+
+    for (
+      let i = 0;
+      i < totalSlides;
+      i++
+    ) {
+
+      const dot =
+        document.createElement(
+          'div'
+        );
+
+
+      dot.className =
+        'dot' +
+        (
+          i === 0
+            ? ' done'
+            : ''
+        );
+
+
+      dot.id =
+        'dot-' + i;
+
+
+      dotsEl.appendChild(dot);
+
+    }
+
+
+    /* =========================
+       NEXT SLIDE
+    ========================= */
+
+    function nextSlide() {
+
+      document
+        .getElementById(
+          'slide-' + current
+        )
+        .classList
+        .remove('active');
+
+
+      current++;
+
+
+      document
+        .getElementById(
+          'slide-' + current
+        )
+        .classList
+        .add('active');
+
+
+      updateDots();
+
+
+      spawnHearts(8);
+
+    }
+
+
+    /* =========================
+       UPDATE DOTS
+    ========================= */
+
+    function updateDots() {
+
+      for (
+        let i = 0;
+        i < totalSlides;
+        i++
+      ) {
+
+        const dot =
+          document.getElementById(
+            'dot-' + i
+          );
+
+
+        if (dot) {
+
+          dot.className =
+            'dot' +
+            (
+              i <= current
+                ? ' done'
+                : ''
+            );
+
+        }
+
+      }
+
+    }
+
+
+    /* =========================
+       FINAL BIRTHDAY SCREEN
+    ========================= */
+
+    function birthdayFinal() {
+
+      document
+        .getElementById(
+          'slide-' + current
+        )
+        .classList
+        .remove('active');
+
+
+      document
+        .getElementById(
+          'slide-final'
+        )
+        .classList
+        .add('active');
+
+
+      dotsEl.style.display =
+        'none';
+
+
+      spawnHearts(20);
+
+    }
+
+
+    /* =========================
+       BLOW CANDLES
+    ========================= */
+
+    function blowCandles() {
+
+
+      /* Hide flames */
+
+      document
+        .querySelectorAll(
+          '.flame'
+        )
+        .forEach(
+          flame => {
+
+            flame.style.display =
+              'none';
+
+          }
+        );
+
+
+      /* Hide button */
+
+      document
+        .querySelector(
+          '.blow-btn'
+        )
+        .style.display =
+        'none';
+
+
+      /* Show message */
+
+      document
+        .getElementById(
+          'afterBlow'
+        )
+        .classList
+        .add('show');
+
+
+      /* Hearts */
+
+      spawnHearts(40);
+
+
+      /* Confetti */
+
+      createConfetti();
+
+
+      /* More celebration */
+
+      setTimeout(
+        createConfetti,
+        1200
+      );
+
+
+      setTimeout(
+        createConfetti,
+        2500
+      );
+
+    }
+
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    function spawnHearts(
+      count = 8
+    ) {
+
+
+      const box =
+        document.getElementById(
+          'heartsBox'
+        );
+
+
+      const emojis = [
+
+        '❤️',
+        '💕',
+        '💖',
+        '💗',
+        '💝',
+        '🌸',
+        '🥰',
+        '✨',
+        '💓'
+
+      ];
+
+
+      for (
+        let i = 0;
+        i < count;
+        i++
+      ) {
+
+
+        setTimeout(
+          () => {
+
+
+            const heart =
+              document.createElement(
+                'div'
+              );
+
+
+            heart.className =
+              'heart';
+
+
+            heart.textContent =
+              emojis[
+                Math.floor(
+                  Math.random()
+                  *
+                  emojis.length
+                )
+              ];
+
+
+            heart.style.left =
+              Math.random()
+              *
+              95
+              +
+              '%';
+
+
+            heart.style.animationDuration =
+              (
+                2 +
+                Math.random()
+                * 3
+              )
+              +
+              's';
+
+
+            box.appendChild(
+              heart
+            );
+
+
+            setTimeout(
+              () => {
+
+                heart.remove();
+
+              },
+              5500
+            );
+
+
+          },
+          i * 100
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       CONFETTI
+    ========================= */
+
+    function createConfetti() {
+
+
+      const box =
+        document.getElementById(
+          'confettiBox'
+        );
+
+
+      const colors = [
+
+        '#ff4081',
+        '#e91e63',
+        '#ff9800',
+        '#ffeb3b',
+        '#4caf50',
+        '#2196f3',
+        '#9c27b0',
+        '#00bcd4'
+
+      ];
+
+
+      for (
+        let i = 0;
+        i < 90;
+        i++
+      ) {
+
+
+        const piece =
+          document.createElement(
+            'div'
+          );
+
+
+        piece.className =
+          'confetti-piece';
+
+
+        piece.style.left =
+          Math.random()
+          *
+          100
+          +
+          '%';
+
+
+        piece.style.background =
+          colors[
+            Math.floor(
+              Math.random()
+              *
+              colors.length
+            )
+          ];
+
+
+        piece.style.animationDuration =
+          (
+            2 +
+            Math.random()
+            * 3
+          )
+          +
+          's';
+
+
+        piece.style.animationDelay =
+          Math.random()
+          *
+          .7
+          +
+          's';
+
+
+        box.appendChild(
+          piece
+        );
+
+
+        setTimeout(
+          () => {
+
+            piece.remove();
+
+          },
+          6000
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       RESTART
+    ========================= */
+
+    function restartSlides() {
+
+
+      document
+        .querySelectorAll(
+          '.slide'
+        )
+        .forEach(
+          slide => {
+
+            slide.classList
+              .remove('active');
+
+          }
+        );
+
+
+      current = 0;
+
+
+      document
+        .getElementById(
+          'slide-0'
+        )
+        .classList
+        .add('active');
+
+
+      dotsEl.style.display =
+        'flex';
+
+
+      for (
+        let i = 0;
+        i < totalSlides;
+        i++
+      ) {
+
+
+        const dot =
+          document.getElementById(
+            'dot-' + i
+          );
+
+
+        if (dot) {
+
+          dot.className =
+            'dot' +
+            (
+              i === 0
+                ? ' done'
+                : ''
+            );
+
+        }
+
+      }
+
+
+      /* Reset candles */
+
+      document
+        .querySelectorAll(
+          '.flame'
+        )
+        .forEach(
+          flame => {
+
+            flame.style.display =
+              'block';
+
+          }
+        );
+
+
+      /* Reset blow button */
+
+      document
+        .querySelector(
+          '.blow-btn'
+        )
+        .style.display =
+        'inline-block';
+
+
+      /* Hide final message */
+
+      document
+        .getElementById(
+          'afterBlow'
+        )
+        .classList
+        .remove('show');
+
+    }
+
+
+    /* =========================
+       INITIAL HEARTS
+    ========================= */
+
+    setTimeout(
+      () => {
+
+        spawnHearts(6);
+
+      },
+      700
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
